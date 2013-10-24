@@ -10,7 +10,7 @@ This addon creates a LibDataBroker-1.1 "object" that allows you to manage oQueue
 * Left-click the object to toggle oQueue's premade finder window.
 * Right-click the object to display a dropdown menu with various additional features.
 
-Requires [oQueue](http://www.curse.com/addons/wow/oqueue) to work.
+Requires [oQueue](http://solidice.com/oqueue/) to work.
 
 Requires a "broker display" addon.  Examples include [Bazooka](http://www.curse.com/addons/wow/bazooka), [Chocolate Bar](http://www.curse.com/addons/wow/chocolatebar) and [Titan Panel](http://www.curse.com/addons/wow/titan-panel).
 
