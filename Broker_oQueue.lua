@@ -11,6 +11,7 @@ oQueueLDB.text = "oQueue"
 
 function oQueueLDB:OnClick(button)
 	OQ_buttonShow(self, button, false)
+	oqmenu:SetClampedToScreen(true)
 end
 
 function oQueueLDB:OnEnter()
