@@ -1,6 +1,10 @@
 
 local name, oQueueLDB = ...
 
+-- stolen without permission from SlashIn
+local MacroEditBox = MacroEditBox
+local MacroEditBox_OnEvent = MacroEditBox:GetScript("OnEvent")
+
 
 LibStub("LibDataBroker-1.1"):NewDataObject(name, oQueueLDB)
 
@@ -10,10 +14,14 @@ oQueueLDB.text = "oQueue"
 
 
 function oQueueLDB:OnClick(button)
-	OQ_buttonShow(self, button, false)
+	if IsShiftKeyDown() then
+		MacroEditBox_OnEvent(MacroEditBox, "EXECUTE_CHAT_LINE", "/oq mini")
+	else
+		OQ_buttonShow(self, button, false)
 
-	if button == "RightButton" then
-		oqmenu:SetClampedToScreen(true)
+		if button == "RightButton" then
+			oqmenu:SetClampedToScreen(true)
+		end
 	end
 end
 
@@ -24,6 +32,7 @@ function oQueueLDB:OnEnter()
 
 	GameTooltip:SetText("oQueue")
 	GameTooltip:AddLine("|cffeda55fLeft-click|r to toggle main UI.")
+	GameTooltip:AddLine("|cffeda55fShift-click|r to toggle minimap button.")
 	GameTooltip:AddLine("|cffeda55fRight-click|r for options.")
 
 	GameTooltip:Show()
