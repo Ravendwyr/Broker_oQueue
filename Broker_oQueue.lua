@@ -33,7 +33,7 @@ function oQueueLDB:OnEnter()
 	GameTooltip:SetText("oQueue")
 	GameTooltip:AddLine("|cffeda55fLeft-click|r to toggle main UI.")
 	GameTooltip:AddLine("|cffeda55fShift-click|r to toggle minimap button.")
-	GameTooltip:AddLine("|cffeda55fRight-click|r for options.")
+	GameTooltip:AddLine("|cffeda55fRight-click|r for menu.")
 
 	GameTooltip:Show()
 end
